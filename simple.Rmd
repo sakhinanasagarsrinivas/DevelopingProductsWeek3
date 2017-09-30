@@ -1,0 +1,50 @@
+---
+title: "Welcome to Presentation!"
+author: "Sagar Srinivas"
+date: "09/30/2017"
+output: 
+  revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["search", "zoom", "notes", "chalkboard", "menu"]
+    reveal_options:
+      chalkboard: 
+        theme: chalkboard
+        toggleNotesButton: true
+      menu:
+        numbers: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity! 
+
+
+
+## Slide with Bullets
+
+- This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+<aside class="notes">
+Here are some notes.
+</aside>
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+head(cars,5)
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r qplot, fig.width=6, fig.height=6, message=FALSE}
+# Quick summary and plot
+library(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth()
+```
+
